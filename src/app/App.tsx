@@ -1,16 +1,10 @@
-import {Button} from "@shared/components/button";
-import {ThemeProvider} from "styled-components";
-import {GlobalStyles, lightTheme} from "@shared/styles";
+import {RouterProvider} from "react-router";
+import routes from "@/app/providers/routes.tsx";
 
 
 const App = () => {
     return (
-        <div>
-            <ThemeProvider theme={lightTheme}>
-                <GlobalStyles />
-                <Button>Кнопка</Button>
-            </ThemeProvider>
-        </div>
+        <RouterProvider router={routes}/>
     );
 };
 
